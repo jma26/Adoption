@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <p> <a [routerLink]='["home"]'> Home </a> </p>
+  <div>
+    <h1> Details about {{ pet.name }} </h1>
+    <h2> Pet Type: {{ pet.type }} </h2>
+    <h2> Description: {{ pet.description }} </h2> 
+    <h2> {{ pet.name }}'s skills: {{ pet.skills1 }}, {{ pet.skills2 }}, {{ pet.skills3 }} </h2> 
+    <h2> Likes: {{ pet.likes }} </h2>
+    <button (click)='like()' *ngIf='likeBoolean'> Like this pet </button>
+    <button (click)='adopt()'> Adopt this pet! </button>
+  </div>
+</body>
+</html>
